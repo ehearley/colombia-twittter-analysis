@@ -1,4 +1,6 @@
 import json
+import re
+import pandas as pd
 
 # String of path to file: tweets_data_path
 tweets_data_path='tweets.txt'
@@ -20,16 +22,12 @@ tweets_file.close()
 # Print the keys of the first tweet dict
 print(tweets_data[0].keys())
 
-# Import package
-import pandas as pd
 
 # Build DataFrame of tweet texts and languages
 df = pd.DataFrame(tweets_data, columns=['text', 'lang'])
 
 # Print head of DataFrame
 print(df.head())
-
-import re
 
 def word_in_text(word, tweet):
     word = word.lower()
@@ -52,7 +50,7 @@ for index, row in df.iterrows():
     sanders += word_in_text('sanders', row['text'])
     cruz += word_in_text('cruz', row['text'])
 
-# Import packages
+#Visualization
 import matplotlib.pyplot as plt
 import seaborn as sns
 
