@@ -1,0 +1,8 @@
+mongoexport --db elisabethtweets --collection v0 --query '{"lang": "en"}' --type csv --fieldFile csv_fields.txt --out C:\Users\bbits\Desktop\Documentss\"1 SCHOOL"\"5 CODE"\stream_twitter\parsed_tweets.csv
+
+mongoexport --db elisabethtweets --collection v0 --type=csv --fieldFile csv_fields.txt --out parsed_tweets.csv
+
+mongoexport --db elisabethtweets --collection v0 --limit 2000 --type=csv --fieldFile csv_fields.txt --out 2000_parsed_tweets.csv
+
+
+mongoexport --db elisabethtweets --collection v0 --limit 2000 --type=csv --fieldFile csv_fields.txt --out parsed_tweets.csv
